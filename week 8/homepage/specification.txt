@@ -1,0 +1,29 @@
+HTML tags (distinct):
+- <p>
+- <script>
+- <div>
+- <h1>
+- <h2>
+- <b>
+- <h5>
+- <img>
+- <a>
+- <font>
+- <button>
+
+
+CSS (distinct)
+- background-color:;
+- margin-bottom;
+- margin-left;
+- border;
+- font-size;
+- object-position;
+- padding;
+- line-height;
+
+
+
+how i chose to use JavaScript an Bootstrap:
+JavaScript: In order to make my homepage more interactive i chose to use JavaScript to change the background color everytime the user intents to click on one of the buttons.
+Bootstrap: I decided to use the card layout from bootstrap in order to make my webpage look clean.

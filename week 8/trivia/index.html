@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                var response = document.getElementById('response');
+                let form = document.querySelector('form');
+                let text = document.querySelector('form')
+                document.querySelector('form');
+                document.querySelector('#B').addEventListener('click',function() {
+                    document.getElementById('B').style.backgroundColor = 'green';
+                    response.innerHTML = '<p>' + 'correct';
+                });
+                document.querySelector('#L').addEventListener('click', function() {
+                    document.getElementById('L').style.backgroundColor = 'red';
+                    response.innerHTML = '<p>' + 'incorrect';
+                })
+                document.querySelector('#P').addEventListener('click', function() {
+                    document.getElementById('P').style.backgroundColor = 'red';
+                    response.innerHTML = '<p>' + 'incorrect';
+                })
+
+            document.querySelector('#check').addEventListener('click', function() {
+                let input = document.querySelector('input');
+                if (input.value === 'Eintracht Braunschweig') {
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else {
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect'
+                }
+            });
+            event.preventDefault();
+        });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                 What is the capital of Germany?
+                 <p>
+                <button  id = "B"> Berlin</button>
+                <button  id = "L">London</button>
+                <button  id = "P">Paris</button>
+                <div id = 'response'></div>
+                 </p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>
+                    Which soccer club won the Niedersachsen-derby lately?
+                 </h3>
+                 <input type = "text"></input>
+                 <button id = "check"> Check Answer</button>
+                 <p class = 'feedback'></p>
+            </div>
+        </div>
+    </body>
+</html>

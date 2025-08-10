@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    paper
+{% endblock %}
+
+{% block main %}
+    <form action = "/paper" method = "post">
+        <div class = "card text-center form-control mx-auto w-auto text-bg-light mb-3" style = "max-width: 600px; padding: 20px;">
+            <img src = "{{url_for ('static', filename = 'Paper.png')}}" alt = "image">
+            <div class = "card-body text-center form-control mx-auto w-auto text-bg-light mb-3" style = "max-width: 600px; padding: 20px;">
+                <h5 class = "card-title" style = "text-align: center">
+                    <h2><b>Paper</b></h2>
+                </h5>
+                <p class = "card-text">
+                    In meiner Facharbeit habe ich mich intensiv mit der genetischen Vererbung von Hämophilie und den Möglichkeiten
+                    zur mathematischen Modellierung ihrer zukünftigen Verbreitung in Deutschland beschäftigt.
+                </p>
+                <p><b>Klicke hier, um meine Facharbeit zu lesen und mehr über die Hintergründe meiner Simulation zu erfahren.</b></p>
+                <a href = "{{url_for ('static', filename = 'termpaperwebsite.pdf')}}" class = "download-button">download paper</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

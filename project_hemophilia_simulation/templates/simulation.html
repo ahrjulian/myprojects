@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    simulation
+{% endblock %}
+
+{% block main %}
+    <div class = "sim-container">
+        <div class = "sim-card text-center text-bg-light mb-3" style = "max-width: 700px; margin: 20px auto; border-radius: 10px; padding: 20px; ">
+            <h5 class = "card-title" style = "text-align:center">
+                <h2><b>Simulation</b></h2>
+            </h5>
+            <p class = "card-text">
+                Mithilfe unserer interaktiven Simulation kannst du selbst erleben, wie sich verschiedene Parameter - wie Migration oder der demografische Wandel - auf die zukünftige Zahl der Hämophilie-Erkrankungen in Deutschland auswirken könnten.
+            </p>
+            <p><b>Klicken Sie hier um die Simulation zu starten und in die Zukunft zu blicken</b></p>
+            <form action = "/simulation" method = "post">
+                <button class = "btn btn-outline-danger" type = "submit">
+                    <b>Run Simulation<b>
+                </button>
+            </form>
+            <p></p>
+            <form action = "delete_simulation_data" method = "post">
+                <button type = "submit" class = "btn btn-outline-danger"><b>Simulations-Ergebnisse löschen</b></button>
+            </form>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div class = "sim-table">
+            <table class = "table table-bordered table-hover text-center">
+                <thead class ="table-dark">
+                    <tr>
+                        <th>Jahr</th>
+                        <th>Populationsgröße</th>
+                        <th>Anzahl an Hämophilie-Erkrankungen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in simulation_data %}
+                        <tr>
+                            <td>{{data.year}}</td>
+                            <td>{{data.population_size}}</td>
+                            <td>{{data.affected}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

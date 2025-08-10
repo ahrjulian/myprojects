@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+
+{% block main %}
+    <div class = "mb-3">
+        <img src = "{{ url_for('static', filename = 'Screenshot.png')}}" alt = "image" style = "border: 13px solid #000">
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    hemophilia
+{% endblock %}
+
+
+{% block main %}
+    <form action = "/hemophilia">
+        <div class = "card text-center text-bg-light mb-3 form-control w-auto mx-auto" style = "max-width: 600px; padding: 20px;">
+            <img src = "{{url_for('static', filename = 'hemophilia.jpg')}}">
+            <div class = "card-body text-center text-bg-light mb-3" style = "max-width: 600px; padding: 20px">
+                <h5 class = "card-title" style = text-align: center>
+                    <h2><b>Hämophilie</b></h2>
+                </h5>
+                <p class = "card-text">
+                    Hämophilie ist eine seltende, vererbare Blutkrankheit, bei der dem Körper bestimmte Gerinnungsfaktoren fehlen.
+                    Dadurch können Blutungen - sowohl äußerlich als auch innerlich - nur schwer gestoppt werden. Die Krankheit betrifft
+                    überwiegend Männer, da der Gendefekt auf dem X-Chromosome liegt. Es gibt zwei Hauptformen: Hämophilie A (Mangel an Faktor VIII)
+                    und Hämophilie B (Mangel an Faktor IX). Typische Symptome sind blaue Flecken, lange Nachblutungen und spontane Blutungen im
+                    Gelenken oder Muskeln. Hämophilie wird meist veerbt, kann aber auch durch spontane Mutationen entstehen. Die Behandlung
+                    erfolgt meist durch regelmäßige Gabe der fehlenden Gerinnungsfaktoren, wodurch Blutungen verhindert oder reduziert werden können.
+                </p>
+            </div>
+        </div>
+    </form>
+{% endblock %}

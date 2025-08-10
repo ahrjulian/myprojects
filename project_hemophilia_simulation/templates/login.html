@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block titel %}
+    login
+{% endblock %}
+
+
+{% block main %}
+    <form action = "/login" action = "/simulation" action = "/paper" method = "post">
+        <div class = "mb-3">
+            <input autocomplete = "off" type = "text" autofocus placeholder = "Benutzername" name = "username" class = "form-control mx-auto w-auto">
+        </div>
+        <div class = "mb-3">
+            <input type = "text" autocomplete = "off" autofocus class = "form-control mx-auto w-auto" placeholder = "Passwort" name = "password">
+        </div>
+        <div>
+            <button type = "submit" class = "btn btn-outline-primary">Bestätigen</button>
+        </div>
+    </form>
+{% endblock %}
+
+

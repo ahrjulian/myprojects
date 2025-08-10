@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+
+{% block main %}
+    <div class = "container mt-4">
+        <table class = "table table-bordered table-hover text-center">
+            <thead class = "table-dark">
+                <tr>
+                    <th><b>Transaction</b></th>
+                    <th><b>Symbol</b></th>
+                    <th><b>Balance</b></th>
+                    <th><b>Date</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in cash_updated %}
+                    <tr>
+                        <td>{{row.action}}</td>
+                        <td>{{row.stock}}</td>
+                        <td>{{row.balance}}</td>
+                        <td>{{row.date}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+    <div class = "container mt-4">
+        <table class = "table table-bordered table-hover text-center">
+            <thead class = "table-dark">
+                <tr>
+                    <th>Symbol</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in cash_updated %}
+                    <tr>
+                        <td>{{row.stock}}</td>
+                        <td>{{row.numbershares}}</td>
+                        <td>{{row.cost_per_share}}</td>
+                        <td>{{row.costs}}</td>
+                    </tr>
+                {% endfor %}
+                <tr class = "text-align: right">
+                    <td></td>
+                </tr>
+                <tr class = "text-align: right">
+                    <td><b>cash:</b> {{cash}}</td>
+                </tr>
+                <tr>
+                    <td><b>TOTAL:</b> {{sum_cost}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <form action = "/return_main_page" method = "post" action = "/">
+        <div class = "mb-3">
+            <button type = "submit" class = "btn btn-outline-primary">return to main page</button>
+        </div>
+    </form>
+{% endblock %}
+

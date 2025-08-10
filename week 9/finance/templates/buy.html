@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    buy
+{% endblock %}
+
+{% block main %}
+    <form action = "/buy" action = "/history" method = "post">
+        <div class = "mb-3">
+            <input autocomplete = "off" autofocus type = "text" placeholder = "symbol" name = "symbol" class = "form-control mx-auto w-auto">
+        </div>
+        <div class = "mb-3">
+            <input autocomplete = "off" type = "number" placeholder = "number of shares" name = "shares" class = "form-control mx-auto w-auto">
+        </div>
+        <div class = "mb-3">
+            <button type = "submit" class = "btn btn-primary">confirm</button>
+        </div>
+    </form>
+{% endblock %}

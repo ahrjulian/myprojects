@@ -1,0 +1,9 @@
+Since the average energy is 0.65906, the average valence is 0.4844 (this shows that the user does not specifically listen to sad or happy songs)
+and the average danceability is 0.71646 we can draw the conclusion that the Aura that probably fits best would be the Purple
+Aura since it states that the Purple aura pairs perfect with passionate music listeners. For them music is something that
+get's them moving (high average energy), while at the same it navigates them trough their daily life with all ups and downs.
+(That might be the reason why the user is listening to both happy and sad songs).
+
+An issue that could come up is that there isn't a specific index for each aura so you often end up in a position where you
+are not really sure wich aura would fit best. Additionaly the data might not be accurate since the databse only listed the top 100 songs that the user listend to over the last year.
+In order to fix those problems I would recommend using a certain index for each aura plus we should try to optain more data.
